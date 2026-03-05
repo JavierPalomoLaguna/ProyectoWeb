@@ -15,8 +15,7 @@ class StaticViewSitemap(Sitemap):
             'blog',                     # App blog
             'politica_privacidad',      # Política de privacidad
             'aviso_legal',              # Aviso legal
-            'politica_cookies',         # Política de cookies
-            'password_reset',           # Recuperar contraseña
+            'politica_cookies',         # Política de cookies            
         ]
 
     def location(self, item):
