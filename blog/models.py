@@ -20,6 +20,7 @@ class Post(models.Model):
     imagen = models.ImageField(upload_to='blog', null=True, blank=True)
     autor = models.ForeignKey(User, on_delete=models.CASCADE)
     categorias = models.ManyToManyField(Categoria)
+    orden = models.IntegerField(default=0)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
