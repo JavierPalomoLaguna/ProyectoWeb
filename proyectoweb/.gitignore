@@ -56,3 +56,5 @@ htmlcov/
 
 # Archivos de configuración local
 local_settings.py
+
+staticfiles/
