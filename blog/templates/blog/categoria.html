@@ -2,46 +2,36 @@
 {% load static %}
 
 {% block content %}
-<section class="page-section" style="padding: 0;">
-  <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
-    <h2 class="section-heading mb-4 text-center">Reflexiones, comentarios y cosas varias...</h2>
-    <div class="d-flex flex-wrap justify-content-start" style="gap: 12px; padding-left: 12px; padding-right: 12px;">
-      {% for post in posts %}
-        <div style="flex: 1 1 calc(25% - 12px); max-width: calc(25% - 12px); min-width: 280px;">
-          <div class="card h-100 shadow-sm">
-            {% if post.imagen %}
-              <img src="{{ post.imagen.url }}" alt="{{ post.titulo }}"
-                   class="card-img-top"
-                   style="height: 140px; object-fit: cover;">
-            {% endif %}
-            <div class="card-body">
-              <h4 class="card-title"><strong>{{ post.titulo }}</strong></h4>
-              <p class="card-text">{{ post.contenido|truncatechars:100 }}</p>
-            </div>
-            <div class="card-footer text-muted small">
-              
-              {{ post.updated|date:"d/m/Y" }}<br>
-              Categoría: 
-              {% for categoria in post.categorias.all %}
-                {{ categoria.nombre }}
-              {% endfor %}
-             <p class="card-text">Autor: {{ post.autor }}</p>
-            </div>
+<div class="blog-container">
+
+  <div class="blog-header">
+    <h1>{{ categoria.nombre }}</h1>
+    <p>Reflexiones, comentarios y cosas varias...</p>
+    <a href="{% url 'blog' %}" class="btn btn-outline-secondary mt-2">← Volver a todos los posts</a>
+  </div>
+
+  <div class="blog-grid">
+    {% for post in posts %}
+      <a href="{% url 'post_detail' post.id %}" class="blog-card">
+        {% if post.imagen %}
+          <div class="blog-card-imagen">
+            <img src="{{ post.imagen.url }}" alt="{{ post.titulo }}">
           </div>
+        {% else %}
+          <div class="blog-card-sin-imagen">📝</div>
+        {% endif %}
+        <div class="blog-card-contenido">
+          <div class="blog-card-meta">
+            {{ post.updated|date:"d/m/Y" }} &nbsp;·&nbsp;
+            {% for cat in post.categorias.all %}{{ cat.nombre }}{% endfor %}
+          </div>
+          <h2>{{ post.titulo }}</h2>
+          <p>{{ post.contenido|truncatechars:120 }}</p>
+          <span class="blog-leer-mas">Leer más →</span>
         </div>
-      {% endfor %}
-    </div>
+      </a>
+    {% endfor %}
   </div>
-</section>
 
-<section>
-  <div class="text-center text-white mx-auto" style="width: 75%;">
-    <p style="margin: 0;">
-      <strong>Categoría actual:&nbsp;</strong> {{ categoria.nombre }}<br>
-      <a href="{% url 'blog' %}" class="btn btn-outline-light mt-2">← Volver a todos los blog</a>
-    </p>
-  </div>
-</section>
+</div>
 {% endblock %}
-
-
