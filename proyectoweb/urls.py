@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.contrib.auth import views as auth_views
 from django.contrib.sitemaps.views import sitemap
-from ProyectoWebApp.sitemaps import StaticViewSitemap
+from ProyectoWebApp.sitemaps import StaticViewSitemap, BlogSitemap
 from django.views.generic import RedirectView  
 from django.conf import settings  
 from django.conf.urls.static import static 
@@ -26,6 +26,7 @@ from ProyectoWebApp import views
 
 sitemaps = {
     'static': StaticViewSitemap,
+    'blog': BlogSitemap,
 }
 
 urlpatterns = [
