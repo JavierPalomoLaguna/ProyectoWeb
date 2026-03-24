@@ -29,4 +29,27 @@
   </div>
 
 </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ post.titulo }}",
+  "description": "{{ post.contenido|truncatechars:155 }}",
+  "datePublished": "{{ post.created|date:'Y-m-d' }}",
+  "dateModified": "{{ post.updated|date:'Y-m-d' }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ post.autor }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Código Vivo Studio",
+    "url": "https://www.codigovivostudio.cloud"
+  },
+  "url": "https://www.codigovivostudio.cloud{{ request.path }}"
+  {% if post.imagen %}
+  ,"image": "https://www.codigovivostudio.cloud{{ post.imagen.url }}"
+  {% endif %}
+}
+</script>
 {% endblock %}
