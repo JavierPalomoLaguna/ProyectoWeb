@@ -178,12 +178,3 @@
   color: #444;
   line-height: 1.9;
 }
-.post-contenido a {
-  color: #667eea;
-  text-decoration: underline;
-  font-weight: 600;
-}
-
-.post-contenido a:hover {
-  color: #5a6fd8;
-}
