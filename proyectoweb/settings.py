@@ -72,7 +72,7 @@ INSTALLED_APPS = [
     'clientes',
     'ventas.apps.VentasConfig',
     'crispy_forms',
-    'crispy_bootstrap4',
+    'crispy_bootstrap4',    
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

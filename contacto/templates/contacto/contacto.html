@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Código Vivo Studio</title>
+    <title>Contacto | Presupuesto Web sin Compromiso - Código Vivo Studio</title>
+    <meta name="description" content="Contacta con Código Vivo Studio para presupuesto de páginas web, tiendas online y sistemas web a medida. Sin compromiso.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.codigovivostudio.cloud/contacto/">
     <link href="{% static 'ProyectoWebApp/css/gestion.css' %}" rel="stylesheet">
     <link href="{% static 'ProyectoWebApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 </head>
 <body class="index-layout">
 
-    <!-- NAVBAR DE BOOTSTRAP FUNCIONAL -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" style="background-color: rgba(17, 17, 17, 0.95);">
         <div class="container">
             <a class="navbar-brand text-uppercase text-expanded font-weight-bold" href="/" style="font-size: 1.5rem;">
@@ -23,19 +25,19 @@
             <div class="collapse navbar-collapse" id="navbarContacto">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item px-lg-3">
-                        <a class="nav-link text-uppercase text-expanded" href="/">Inicio</a>
+                        <a class="nav-link text-uppercase text-expanded" href="{% url 'index' %}">Inicio</a>
                     </li>
                     <li class="nav-item px-lg-3">
-                        <a class="nav-link text-uppercase text-expanded" href="/servicios/">Restaurante</a>
+                        <a class="nav-link text-uppercase text-expanded" href="{% url 'servicios' %}">Restaurante</a>
                     </li>
                     <li class="nav-item px-lg-3">
-                        <a class="nav-link text-uppercase text-expanded" href="/tienda/">Tienda</a>
+                        <a class="nav-link text-uppercase text-expanded" href="{% url 'tienda' %}">Tienda</a>
                     </li>
                     <li class="nav-item px-lg-3">
-                        <a class="nav-link text-uppercase text-expanded" href="/contacto/">Contacto</a>
+                        <a class="nav-link text-uppercase text-expanded" href="{% url 'contacto' %}">Contacto</a>
                     </li>
                     <li class="nav-item px-lg-3">
-                        <a class="nav-link text-uppercase text-expanded" href="/blog/">Blog</a>
+                        <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -82,7 +84,6 @@
         </p> 
     </footer>
 
-    <!-- SCRIPTS NECESARIOS -->
     <script src="{% static 'ProyectoWebApp/vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'ProyectoWebApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 

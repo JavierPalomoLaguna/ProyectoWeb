@@ -45,5 +45,5 @@ urlpatterns = [
     path('ventas/', include('ventas.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', RedirectView.as_view(url='/static/ProyectoWebApp/robots.txt', permanent=True)),
-    path('politica-cookies/', views.politica_cookies, name='politica_cookies'),
+    path('politica-cookies/', views.politica_cookies, name='politica_cookies'),    
 ]
