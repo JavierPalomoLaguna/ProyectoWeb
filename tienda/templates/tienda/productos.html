@@ -4,6 +4,7 @@
 {% block title %}{{ producto.nombre }} - Tienda CVS{% endblock %}
 
 {% block meta_description %}{{ producto.caracteristicas|truncatechars:160 }}{% endblock %}
+{% block robots %}<meta name="robots" content="noindex, nofollow">{% endblock %}
 
 {% block extra_css %}
 <style>

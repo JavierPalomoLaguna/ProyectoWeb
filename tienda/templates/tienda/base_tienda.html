@@ -8,7 +8,7 @@
     <title>{% if meta_title %}{{ meta_title }}{% else %}Tienda - Código Vivo Studio{% endif %}</title>
     <meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}Descubre nuestros productos exclusivos en la tienda online de Código Vivo Studio.{% endif %}">
     <meta name="author" content="Código Vivo Studio">
-    
+    {% block robots %}{% endblock %}
     <!-- Schema.org markup -->
     <script type="application/ld+json">
     {
