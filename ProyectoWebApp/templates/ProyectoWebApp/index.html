@@ -331,46 +331,91 @@
   </section>
 
   <!-- TESTIMONIO CON IMAGEN -->
-  <section class="testimonio-with-image" style="padding: 80px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"> 
-    <div class="container"> 
-      <div class="row align-items-center">
-        <div class="col-lg-4 text-center mb-4 mb-lg-0">
-          <img src="{% static 'ProyectoWebApp/img/testimonio-cliente.webp' %}" alt="Director de Tecnología satisfecho con sistema desarrollado por Código Vivo Studio" width="200" height="200" loading="lazy" class="img-fluid rounded-circle shadow" style="width: 200px; height: 200px; object-fit: cover;">
-        </div>
-        <div class="col-lg-8">
-          <div class="testimonio-content text-center text-lg-start"> 
-            <h2 class="mb-4" style="font-size: 2.2rem;">⭐ Opinión de clientes</h2> 
-            <p class="lead" style="font-size: 1.3rem; font-style: italic;">"El sistema que nos entregó nos permitió tener control total sobre nuestros procesos y mejorar la eficiencia operativa sin depender de plataformas externas."</p> 
-            <small style="opacity: 0.9; font-size: 1.1rem;">— Director de Tecnología</small> 
-          </div>
+  <section class="testimonio-with-image" style="padding: 80px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="font-size: 2.2rem;">⭐ Opinión de clientes</h2>
+    <div class="row justify-content-center">
+
+      <div class="col-lg-3 col-md-6 mb-4 text-center">
+        <img src="{% static 'ProyectoWebApp/img/testimonio-cliente.webp' %}" alt="Director de Tecnología" width="100" height="100" loading="lazy" class="rounded-circle shadow mb-3" style="width:100px;height:100px;object-fit:cover;">
+        <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 24px; margin: 0 8px;">
+          <p style="font-size: 1rem; font-style: italic;">"El sistema que nos entregó nos permitió tener control total sobre nuestros procesos y mejorar la eficiencia operativa sin depender de plataformas externas."</p>
+          <small style="opacity: 0.9;">— Director de Tecnología ⭐⭐⭐⭐⭐</small>
         </div>
       </div>
-    </div> 
-    <!-- Schema Review para testimonio -->
-    <script type="application/ld+json">
+
+      <div class="col-lg-3 col-md-6 mb-4 text-center">
+        <img src="{% static 'ProyectoWebApp/img/carlos-vega.webp' %}" alt="Carlos Vega Serrano" width="100" height="100" loading="lazy" class="rounded-circle shadow mb-3" style="width:100px;height:100px;object-fit:cover;">
+        <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 24px; margin: 0 8px;">
+          <p style="font-size: 1rem; font-style: italic;">"Muy recomendable. Código Vivo Studio creó mi web de forma profesional y cuidando cada detalle. Comunicación clara, buen asesoramiento y un resultado moderno, rápido y adaptada a móvil."</p>
+          <small style="opacity: 0.9;">— Carlos Vega Serrano ⭐⭐⭐⭐⭐</small>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 text-center">
+        <img src="{% static 'ProyectoWebApp/img/nacho-vega.webp' %}" alt="Nacho Vega Abreu" width="100" height="100" loading="lazy" class="rounded-circle shadow mb-3" style="width:100px;height:100px;object-fit:cover;">
+        <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 24px; margin: 0 8px;">
+          <p style="font-size: 1rem; font-style: italic;">"Gran profesionalidad, cumplimiento de plazos, desarrollo y puesta en marcha del API implementado para mi pequeño negocio. He conseguido centrarme más en mi actividad."</p>
+          <small style="opacity: 0.9;">— Nacho Vega Abreu ⭐⭐⭐⭐⭐</small>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 text-center">
+        <img src="{% static 'ProyectoWebApp/img/fernando-rodriguez.webp' %}" alt="Fernando Rodríguez" width="100" height="100" loading="lazy" class="rounded-circle shadow mb-3" style="width:100px;height:100px;object-fit:cover;">
+        <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 24px; margin: 0 8px;">
+          <p style="font-size: 1rem; font-style: italic;">"Excelente experiencia. Supo entender lo que necesitaba desde el primer momento y el resultado es una web clara, moderna y perfectamente adaptada a móvil."</p>
+          <small style="opacity: 0.9;">— Fernando Rodríguez ⭐⭐⭐⭐⭐</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Código Vivo Studio",
+    "url": "https://www.codigovivostudio.cloud",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "4",
+      "bestRating": "5"
+    },
+    "review": [
       {
-        "@context": "https://schema.org",
         "@type": "Review",
-        "itemReviewed": {
-          "@type": "Organization",
-          "name": "Código Vivo Studio",
-          "url": "https://www.codigovivostudio.cloud"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Director de Tecnología",
-          "jobTitle": "Director de Tecnología"
-        },
+        "author": {"@type": "Person", "name": "Director de Tecnología"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
         "reviewBody": "El sistema que nos entregó nos permitió tener control total sobre nuestros procesos y mejorar la eficiencia operativa sin depender de plataformas externas.",
         "datePublished": "2025-01-15"
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Carlos Vega Serrano"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Muy recomendable. Código Vivo Studio creó mi web de forma profesional y cuidando cada detalle. Comunicación clara, buen asesoramiento y un resultado moderno, rápido y adaptada a móvil.",
+        "datePublished": "2025-01-15"
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Nacho Vega Abreu"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Gran profesionalidad, cumplimiento de plazos, desarrollo y puesta en marcha del API implementado para mi pequeño negocio.",
+        "datePublished": "2025-01-15"
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Fernando Rodríguez"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Excelente experiencia. Supo entender lo que necesitaba desde el primer momento y el resultado es una web clara, moderna y perfectamente adaptada a móvil.",
+        "datePublished": "2026-03-28"
       }
-    </script>
-  </section>
+    ]
+  }
+  </script>
+</section>
 
   <!-- SECCIÓN FAQ CON ACORDEÓN -->
   <section class="faq-section" style="padding: 80px 0; background: #f8f9fa;" itemscope itemtype="https://schema.org/FAQPage">
