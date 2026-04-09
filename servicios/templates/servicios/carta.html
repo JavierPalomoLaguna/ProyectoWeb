@@ -86,19 +86,7 @@
                     </a>
                 </div>
             </div>
-        </div>
-
-        <!-- Mensajes -->
-        {% if messages %}
-        <div class="container mt-4">
-            {% for message in messages %}
-            <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %} alert-dismissible fade show">
-                {{ message }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            {% endfor %}
-        </div>
-        {% endif %}
+        </div>        
 
         <!-- Categorías y platos -->
         <div class="container py-5">
@@ -149,6 +137,20 @@
                     <h2 class="categoria-titulo">Reservas</h2>
                     <div class="categoria-line"></div>
                 </div>
+
+                <!-- Mensajes -->
+                {% if messages %}
+                <div class="row">
+                    <div class="col-lg-8 mx-auto mb-3">
+                        {% for message in messages %}
+                        <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %} alert-dismissible fade show">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
 
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
