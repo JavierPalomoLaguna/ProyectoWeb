@@ -21,7 +21,8 @@ from ProyectoWebApp.sitemaps import StaticViewSitemap, BlogSitemap
 from django.views.generic import RedirectView  
 from django.conf import settings  
 from django.conf.urls.static import static 
-from ProyectoWebApp import views 
+from ProyectoWebApp import views
+from django.shortcuts import redirect  # ← AÑADIR ESTA LÍNEA 
 
 
 sitemaps = {
@@ -32,6 +33,8 @@ sitemaps = {
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('ProyectoWebApp.urls')),
+    path('servicios', lambda request: redirect('/servicios/', permanent=True)),
+    path('blog', lambda request: redirect('/blog/', permanent=True)),
     path('servicios/', include('servicios.urls')),
     path('blog/', include('blog.urls')),
     path('contacto/', include('contacto.urls')),
