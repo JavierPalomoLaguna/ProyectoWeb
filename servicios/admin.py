@@ -8,10 +8,11 @@ class AlergenoAdmin(admin.ModelAdmin):
 
 class ServicioAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'categoria', 'precio', 'created', 'updated')
-    list_filter = ('categoria', 'created', 'updated', 'alergenos')
+    list_display = ('titulo', 'categoria', 'precio', 'destacado_en_index', 'created')
     search_fields = ('titulo', 'contenido')
     readonly_fields = ('created', 'updated')
     filter_horizontal = ('alergenos',)  # Selector múltiple más amigable
+    list_editable = ('destacado_en_index',)
     
     fieldsets = (
         ('Información básica', {

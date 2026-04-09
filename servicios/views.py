@@ -33,11 +33,16 @@ def index_restaurante(request):
     categorias_ordenadas = []
     for categoria_nombre in orden_categorias:
         if categoria_nombre in servicios_por_categoria:
-            categorias_ordenadas.append({
-                'nombre': categoria_nombre,
-                'servicios': servicios_por_categoria[categoria_nombre],
-                'slug': categoria_nombre.lower().replace(' ', '_').replace('ó', 'o')
-            })
+            # Filtrar solo los servicios destacados de esta categoría
+            servicios_destacados = [s for s in servicios_por_categoria[categoria_nombre] if s.destacado_en_index]
+            
+            # Solo añadir la categoría si tiene servicios destacados
+            if servicios_destacados:
+                categorias_ordenadas.append({
+                    'nombre': categoria_nombre,
+                    'servicios': servicios_destacados,
+                    'slug': categoria_nombre.lower().replace(' ', '_').replace('ó', 'o')
+                })
     
     context = {
         'categorias_ordenadas': categorias_ordenadas,

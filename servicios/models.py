@@ -48,7 +48,8 @@ class Servicio(models.Model):
     imagen = models.ImageField(upload_to='servicios')
     categoria = models.CharField(max_length=20, choices=CATEGORIAS_CHOICES)
     precio = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    alergenos = models.ManyToManyField(Alergeno, blank=True)  # Ahora está en el lugar correcto
+    alergenos = models.ManyToManyField(Alergeno, blank=True)  # Ahora está en el lugar correcto    
+    destacado_en_index = models.BooleanField(default=False, verbose_name="Mostrar en galería del index")# NUEVO CAMPO
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
