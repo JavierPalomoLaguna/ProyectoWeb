@@ -256,6 +256,7 @@ body {
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
     height: 100%;
+    margin-bottom: 25px;
 }
 
 .plato-carta-card:hover {

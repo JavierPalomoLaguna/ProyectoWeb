@@ -111,7 +111,7 @@
 
                 <div class="row g-4">
                     {% for servicio in categoria.servicios %}
-                    <div class="col-md-6">
+                    <div class="col-md-6 {% if forloop.last and categoria.servicios|length|divisibleby:2 == False %}offset-md-3{% endif %}">
                         <div class="plato-carta-card">
                             <div class="row g-0">
                                 <div class="col-5">
