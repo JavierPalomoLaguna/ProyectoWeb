@@ -1,0 +1,560 @@
+/* ============================================ */
+/* VARIABLES */
+/* ============================================ */
+:root {
+    --color-primario: #8B5A2B;
+    --color-secundario: #A0522D;
+    --color-acento: #D2691E;
+    --color-texto: #2c3e50;
+    --color-texto-claro: #666;
+}
+
+/* ============================================ */
+/* GENERAL */
+/* ============================================ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================================ */
+/* NAVBAR */
+/* ============================================ */
+.navbar {
+    background: rgba(44, 62, 80, 0.95);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-acento) !important;
+}
+
+/* ============================================ */
+/* HERO SECTION */
+/* ============================================ */
+.hero-restaurante {
+    position: relative;
+    min-height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://via.placeholder.com/1920x1080/8B5A2B/ffffff?text=Restaurante+La+Trastienda');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(139, 90, 43, 0.3), rgba(0,0,0,0.6));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    color: #F5DEB3;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    letter-spacing: 2px;
+}
+
+.hero-subtitle-2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #F5DEB3;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    line-height: 1.9;
+    color: #f0f0f0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+    background: var(--color-acento);
+    color: white;
+    border: none;
+    padding: 18px 45px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-hero-primary:hover {
+    background: var(--color-primario);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(139, 90, 43, 0.5);
+    color: white;
+}
+
+.btn-hero-secondary {
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+    padding: 18px 45px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-hero-secondary:hover {
+    background: white;
+    color: var(--color-primario);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================ */
+/* LÍNEA DECORATIVA */
+/* ============================================ */
+.decorative-line {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-acento), transparent);
+    margin: 70px auto;
+    max-width: 250px;
+}
+
+/* ============================================ */
+/* SECCIONES GENERALES */
+/* ============================================ */
+.seccion-cocina,
+.seccion-galeria,
+.seccion-ambientes,
+.seccion-reservas,
+.seccion-contacto {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background: #f8f9fa !important;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--color-primario);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    font-size: 2rem;
+    color: var(--color-texto);
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: var(--color-texto-claro);
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+
+/* ============================================ */
+/* PILARES */
+/* ============================================ */
+.pilar-card {
+    text-align: center;
+    padding: 45px 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.pilar-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 18px 45px rgba(139, 90, 43, 0.25);
+}
+
+.pilar-icon {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.pilar-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.pilar-card h4 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+.pilar-card p {
+    color: var(--color-texto-claro);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* ============================================ */
+/* GALERÍA DE PLATOS */
+/* ============================================ */
+.galeria-plato-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    aspect-ratio: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.galeria-plato-imagen {
+    width: 100%;
+    height: 100%;
+}
+
+.galeria-plato-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.galeria-plato-card:hover .galeria-plato-imagen img {
+    transform: scale(1.15);
+}
+
+.galeria-plato-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: white;
+    padding: 25px 15px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.galeria-plato-card:hover .galeria-plato-overlay {
+    transform: translateY(0);
+}
+
+.galeria-plato-overlay h5 {
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.galeria-plato-overlay .precio {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #F5DEB3;
+}
+
+.btn-ver-carta {
+    background: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-ver-carta:hover {
+    background: var(--color-acento);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(139, 90, 43, 0.4);
+    color: white;
+}
+
+/* ============================================ */
+/* AMBIENTES */
+/* ============================================ */
+.ambiente-principal,
+.ambiente-card {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.ambiente-principal img,
+.ambiente-card img {
+    border-radius: 15px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ambiente-card:hover img,
+.ambiente-principal:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 18px 50px rgba(139, 90, 43, 0.3);
+}
+
+/* ============================================ */
+/* RESERVAS */
+/* ============================================ */
+.reserva-form-container {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+}
+
+.reserva-form .form-label {
+    font-weight: 700;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.reserva-form .form-control,
+.reserva-form .form-select {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 14px 18px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.reserva-form .form-control:focus,
+.reserva-form .form-select:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 0.25rem rgba(139, 90, 43, 0.15);
+}
+
+.btn-reservar {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+    color: white;
+    border: none;
+    padding: 18px 60px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-reservar:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(139, 90, 43, 0.5);
+}
+
+/* ============================================ */
+/* CONTACTO */
+/* ============================================ */
+.contacto-info {
+    padding: 20px 0;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.contacto-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.contacto-icon i {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.contacto-texto h4 {
+    color: var(--color-primario);
+    font-weight: 800;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.contacto-texto p {
+    color: var(--color-texto-claro);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.contacto-texto a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contacto-texto a:hover {
+    color: var(--color-acento);
+}
+
+.btn-como-llegar {
+    background: transparent;
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
+    padding: 12px 30px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.btn-como-llegar:hover {
+    background: var(--color-primario);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 90, 43, 0.3);
+}
+
+.mapa-wrapper {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+/* ============================================ */
+/* FOOTER */
+/* ============================================ */
+.footer-restaurante {
+    background: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    margin-top: 80px;
+}
+
+.footer-restaurante p {
+    margin: 0;
+}
+
+/* ============================================ */
+/* RESPONSIVE */
+/* ============================================ */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-subtitle-2 {
+        font-size: 1.5rem;
+    }
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle-2 {
+        font-size: 1.2rem;
+    }
+    .hero-description {
+        font-size: 1rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+    .reserva-form-container {
+        padding: 30px 20px;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* ============================================ */
+/* FIX BOTÓN CERRAR ALERTAS */
+/* ============================================ */
+.alert .btn-close {
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+    width: 1em;
+    height: 1em;
+    padding: 0;
+    border: 0;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.alert .btn-close:hover {
+    opacity: 1;
+}

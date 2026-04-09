@@ -1,0 +1,495 @@
+/* ============================================ */
+/* VARIABLES */
+/* ============================================ */
+:root {
+    --color-primario: #8B5A2B;
+    --color-secundario: #A0522D;
+    --color-acento: #D2691E;
+    --color-texto: #2c3e50;
+    --color-texto-claro: #666;
+    --sidebar-width: 250px;
+}
+
+/* ============================================ */
+/* LAYOUT CON SIDEBAR */
+/* ============================================ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar-carta {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+}
+
+.carta-content {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+/* ============================================ */
+/* SIDEBAR LOGO */
+/* ============================================ */
+.sidebar-logo {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid var(--color-acento);
+}
+
+.sidebar-logo h4 {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* ============================================ */
+/* SIDEBAR NAVEGACIÓN */
+/* ============================================ */
+.sidebar-nav {
+    flex: 1;
+    padding: 30px 0;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 18px 25px;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.sidebar-link i {
+    font-size: 1.3rem;
+    margin-right: 15px;
+    width: 25px;
+}
+
+.sidebar-link:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border-left-color: var(--color-acento);
+}
+
+.sidebar-link.active {
+    background: rgba(210, 105, 30, 0.2);
+    color: white;
+    border-left-color: var(--color-acento);
+}
+
+/* ============================================ */
+/* SIDEBAR FOOTER */
+/* ============================================ */
+.sidebar-footer {
+    padding: 25px;
+    border-top: 2px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.sidebar-info i {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: var(--color-acento);
+    margin-top: 3px;
+}
+
+.sidebar-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.9);
+}
+
+.sidebar-info a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.sidebar-info a:hover {
+    color: var(--color-acento);
+}
+
+/* ============================================ */
+/* HEADER DE LA CARTA */
+/* ============================================ */
+.carta-header {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.carta-titulo-principal {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.carta-descripcion {
+    font-size: 1.4rem;
+    margin: 0;
+    color: rgba(255,255,255,0.95);
+}
+
+/* ============================================ */
+/* NAVEGACIÓN DE CATEGORÍAS */
+/* ============================================ */
+.carta-nav-categorias {
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.categorias-scroll {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 5px 0;
+}
+
+.categorias-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.categorias-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.categorias-scroll::-webkit-scrollbar-thumb {
+    background: var(--color-primario);
+    border-radius: 10px;
+}
+
+.categoria-nav-link {
+    padding: 10px 25px;
+    background: #f8f9fa;
+    color: var(--color-texto);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.categoria-nav-link:hover {
+    background: var(--color-primario);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ============================================ */
+/* SECCIONES DE CATEGORÍAS */
+/* ============================================ */
+.categoria-section {
+    margin-bottom: 60px;
+    scroll-margin-top: 100px;
+}
+
+.categoria-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.categoria-titulo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-primario);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.categoria-line {
+    height: 4px;
+    width: 100px;
+    background: linear-gradient(90deg, var(--color-primario), var(--color-acento));
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* ============================================ */
+/* TARJETAS DE PLATOS */
+/* ============================================ */
+.plato-carta-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.plato-carta-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(139, 90, 43, 0.2);
+}
+
+.plato-carta-imagen {
+    height: 100%;
+    min-height: 180px;
+    overflow: hidden;
+}
+
+.plato-carta-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.plato-carta-card:hover .plato-carta-imagen img {
+    transform: scale(1.1);
+}
+
+.plato-carta-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.plato-carta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.plato-carta-nombre {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    margin: 0;
+    flex: 1;
+    line-height: 1.3;
+}
+
+.plato-carta-precio {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--color-acento);
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.plato-carta-descripcion {
+    color: var(--color-texto-claro);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.plato-carta-alergenos {
+    margin-top: auto;
+}
+
+/* ============================================ */
+/* FORMULARIO DE RESERVAS */
+/* ============================================ */
+.reserva-form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.reserva-form .form-label {
+    font-weight: 700;
+    color: var(--color-primario);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.reserva-form .form-control,
+.reserva-form .form-select {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.reserva-form .form-control:focus,
+.reserva-form .form-select:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 0.2rem rgba(139, 90, 43, 0.15);
+}
+
+.btn-reservar {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+    color: white;
+    border: none;
+    padding: 15px 45px;
+    font-size: 1.15rem;
+    font-weight: 800;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-reservar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(139, 90, 43, 0.4);
+}
+
+/* ============================================ */
+/* CTA FINAL */
+/* ============================================ */
+.carta-cta {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+}
+
+.carta-cta h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.carta-cta p {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    color: rgba(255,255,255,0.95);
+}
+
+.btn-cta-reservar {
+    background: white;
+    color: var(--color-primario);
+    border: none;
+    padding: 18px 50px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-cta-reservar:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(255,255,255,0.3);
+    color: var(--color-primario);
+}
+
+/* ============================================ */
+/* FOOTER */
+/* ============================================ */
+.footer-carta {
+    background: #2c3e50;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-carta p {
+    margin: 0;
+}
+
+/* ============================================ */
+/* RESPONSIVE */
+/* ============================================ */
+@media (max-width: 991px) {
+    .sidebar-carta {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .carta-content {
+        margin-left: 0;
+    }
+    
+    .sidebar-nav {
+        display: flex;
+        padding: 0;
+        overflow-x: auto;
+    }
+    
+    .sidebar-link {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+        white-space: nowrap;
+    }
+    
+    .sidebar-link i {
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+    }
+    
+    .sidebar-footer {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    
+    .carta-titulo-principal {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --sidebar-width: 0px;
+    }
+    
+    .carta-titulo-principal {
+        font-size: 2rem;
+    }
+    
+    .categoria-titulo {
+        font-size: 2rem;
+    }
+    
+    .plato-carta-card .row {
+        flex-direction: column;
+    }
+    
+    .plato-carta-imagen {
+        height: 200px;
+    }
+    
+    .reserva-form-container {
+        padding: 25px 20px;
+    }
+}
