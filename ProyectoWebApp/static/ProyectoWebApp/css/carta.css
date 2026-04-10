@@ -430,9 +430,6 @@ body {
     margin: 0;
 }
 
-/* ============================================ */
-/* RESPONSIVE */
-/* ============================================ */
 @media (max-width: 991px) {
     .sidebar-carta {
         width: 100%;
@@ -487,12 +484,36 @@ body {
         font-size: 2rem;
     }
     
+    /* Fix tarjetas en móvil */
+    .plato-carta-card {
+        height: auto;
+        flex-direction: column;
+    }
+    
     .plato-carta-card .row {
         flex-direction: column;
     }
     
     .plato-carta-imagen {
         height: 200px;
+        width: 100%;
+    }
+    
+    .plato-carta-info {
+        min-height: auto;
+        padding: 15px;
+    }
+    
+    .plato-carta-nombre {
+        font-size: 1.1rem;
+    }
+    
+    .plato-carta-precio {
+        font-size: 1.2rem;
+    }
+    
+    .plato-carta-descripcion {
+        font-size: 0.9rem;
     }
     
     .reserva-form-container {
