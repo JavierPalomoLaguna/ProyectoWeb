@@ -497,13 +497,18 @@ body {
     }
     
     .plato-carta-imagen {
-        height: 300px;
-        width: 100%;
-        background: #f8f9fa;
+    height: 300px;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
-    
+
     .plato-carta-imagen img {
-        object-fit: contain !important;
+        object-fit: cover !important;
+        width: 100%;
+        height: 100%;
     }
     
     .plato-carta-info {
