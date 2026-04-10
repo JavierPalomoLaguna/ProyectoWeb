@@ -497,8 +497,13 @@ body {
     }
     
     .plato-carta-imagen {
-        height: 280px;
+        height: 300px;
         width: 100%;
+        background: #f8f9fa;
+    }
+    
+    .plato-carta-imagen img {
+        object-fit: contain !important;
     }
     
     .plato-carta-info {
@@ -529,7 +534,6 @@ body {
         padding: 25px 20px;
     }
 }
-
 
 /* ============================================ */
 /* FIX BOTÓN CERRAR ALERTAS */
