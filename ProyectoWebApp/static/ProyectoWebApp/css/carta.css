@@ -486,8 +486,10 @@ body {
     
     /* Fix tarjetas en móvil */
     .plato-carta-card {
-        height: auto;
+        height: auto !important;
         flex-direction: column;
+        overflow: visible;
+        display: block;
     }
     
     .plato-carta-card .row {
@@ -502,6 +504,8 @@ body {
     .plato-carta-info {
         min-height: auto;
         padding: 15px;
+        display: block;
+        overflow: visible;
     }
     
     .plato-carta-nombre {
@@ -516,10 +520,16 @@ body {
         font-size: 0.9rem;
     }
     
+    .plato-carta-alergenos {
+        display: block;
+        margin-top: 10px;
+    }
+    
     .reserva-form-container {
         padding: 25px 20px;
     }
 }
+
 
 /* ============================================ */
 /* FIX BOTÓN CERRAR ALERTAS */
