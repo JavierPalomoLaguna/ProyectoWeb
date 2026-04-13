@@ -25,7 +25,7 @@
   <h1>{{ post.titulo }}</h1>
 
   <div class="post-contenido">
-    {{ post.contenido|linebreaks }}
+    {{ post.contenido|safe|linebreaks }}
   </div>
 
 </div>
