@@ -185,9 +185,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <a href="tel:+34613362840" style="color: white; text-decoration: none; font-size: 1.1rem; font-weight: 500; margin-left: auto;">
-          <i class="fas fa-phone" style="margin-right: 8px;"></i>613 36 28 40
-      </a>
+        <!-- Teléfono - Solo icono en móvil, completo en escritorio -->
+        <a href="tel:+34613362840" class="d-lg-none" style="color: white; text-decoration: none; font-size: 1.3rem; margin-left: 15px;">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <a href="tel:+34613362840" class="d-none d-lg-block" style="color: white; text-decoration: none; font-size: 1.1rem; font-weight: 500; margin-left: auto;">
+            <i class="fas fa-phone" style="margin-right: 8px;"></i>613 36 28 40
+        </a>
 
       <div class="collapse navbar-collapse" id="navbarIndex">
         <ul class="navbar-nav mx-auto">
@@ -617,10 +622,9 @@
         <a href="/aviso-legal/" class="link text-white">Aviso legal</a> ·
         <a href="/politica-cookies/" class="link text-white">Cookies</a>
       </p>
-      <p class="m-0 mt-3" style="font-size: 1.1rem;">
-          <i class="fas fa-phone" style="margin-right: 8px;"></i>
-          <a href="tel:+34613362840" style="color: white; text-decoration: none; font-weight: 500;">
-              613 36 28 40
+      <p class="m-0 mt-3" style="font-size: 1.2rem;">
+          <a href="tel:+34613362840" style="color: white; text-decoration: none;">
+              <i class="fas fa-phone"></i> 613 36 28 40
           </a>
       </p>
       <p>&copy; 2025 Código Vivo Studio. Todos los derechos reservados.</p>
