@@ -6,6 +6,12 @@ class StaticViewSitemap(Sitemap):
     priority = 0.8
     changefreq = 'weekly'
     protocol = 'https'
+    
+    def get_urls(self, site=None, **kwargs):
+        site = type('Site', (), {
+            'domain': 'www.codigovivostudio.cloud'
+        })()
+        return super().get_urls(site=site, **kwargs)
 
     def items(self):
         return [
@@ -14,9 +20,6 @@ class StaticViewSitemap(Sitemap):
             'tienda',
             'contacto',
             'blog',
-            'politica_privacidad',
-            'aviso_legal',
-            'politica_cookies',
         ]
 
     def location(self, item):
@@ -27,9 +30,18 @@ class BlogSitemap(Sitemap):
     priority = 0.7
     changefreq = 'monthly'
     protocol = 'https'
+    
+    def get_urls(self, site=None, **kwargs):
+        site = type('Site', (), {
+            'domain': 'www.codigovivostudio.cloud'
+        })()
+        return super().get_urls(site=site, **kwargs)
 
     def items(self):
-        return Post.objects.all()
+        return Post.objects.all().order_by('-updated')
 
+    def lastmod(self, post):
+        return post.updated
+    
     def location(self, post):
         return reverse('post_detail', args=[post.id])
