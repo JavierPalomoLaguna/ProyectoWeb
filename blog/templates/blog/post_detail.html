@@ -18,8 +18,7 @@
 
   <div class="post-meta">
     {{ post.updated|date:"d/m/Y" }} · 
-    {% for cat in post.categorias.all %}{{ cat.nombre }}{% endfor %} · 
-    {{ post.autor }}
+    {% for cat in post.categorias.all %}{{ cat.nombre }}{% endfor %} 
   </div>
 
   <h1>{{ post.titulo }}</h1>
@@ -38,8 +37,8 @@
   "datePublished": "{{ post.created|date:'Y-m-d' }}",
   "dateModified": "{{ post.updated|date:'Y-m-d' }}",
   "author": {
-    "@type": "Person",
-    "name": "{{ post.autor }}"
+    "@type": "Organization",
+    "name": "Código Vivo Studio"
   },
   "publisher": {
     "@type": "Organization",
