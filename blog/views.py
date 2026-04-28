@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from blog.models import Post, Categoria
 
 def blog(request):
-    posts = Post.objects.prefetch_related('categorias').order_by('orden')
+    posts = Post.objects.prefetch_related('categorias').order_by('-created')
     categorias_unicas = {}
     for post in posts:
         for cat in post.categorias.all():
