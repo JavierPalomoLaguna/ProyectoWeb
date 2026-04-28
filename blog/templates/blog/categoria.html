@@ -22,7 +22,7 @@
         {% endif %}
         <div class="blog-card-contenido">
           <div class="blog-card-meta">
-            {{ post.updated|date:"d/m/Y" }} &nbsp;·&nbsp;
+            {{ post.created|date:"d/m/Y" }} &nbsp;·&nbsp;
             {% for cat in post.categorias.all %}{{ cat.nombre }}{% endfor %}
           </div>
           <h2>{{ post.titulo }}</h2>
